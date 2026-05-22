@@ -1099,6 +1099,9 @@ html[data-lang="it"] .hours-list li.it-text {
   line-height: 1.6;
 }
 
+/* Mobile banner image — hidden on desktop, shown on mobile via media query */
+.mobile-banner-img { display: none; }
+
 /* ------------------------------------------------------------
    6c. VIDEO HEADER (menu.html, history.html)
    ------------------------------------------------------------ */
@@ -1679,28 +1682,18 @@ html[data-lang="it"] .hours-list li.it-text {
     min-height: 180px;
     max-height: 280px;
   }
-  /* Hide video on mobile — show background image instead */
+  /* Hide video on mobile — show <img> banner instead */
   .menu-video { display: none; }
-  .video-container {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  .video-header--menu .video-container    { background-image: url('mob_2.png'); }
-  .video-header--history .video-container { background-image: url('mob_1.png'); }
-  .video-header--contact .video-container { background-image: url('mob_3.png'); }
-  /* Apply the same dark overlay so text stays readable */
-  .video-header--menu .video-container::before,
-  .video-header--history .video-container::before,
-  .video-header--contact .video-container::before {
-    content: '';
+  .mobile-banner-img {
+    display: block;
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(43,31,26,0.3) 0%, rgba(43,31,26,0.05) 40%, rgba(43,31,26,0.45) 100%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: 0;
   }
-  .video-overlay { z-index: 1; }
+  .video-overlay { z-index: 2; }
 
   /* Prevent header overflow on small screens */
   .header-container { gap: var(--space-2); padding-inline: var(--space-4); }
