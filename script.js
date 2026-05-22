@@ -256,6 +256,41 @@ function injectGoogleReviews() {
 }
 
 /* ------------------------------------------------------------
+   Mobile video autoplay
+   ------------------------------------------------------------ */
+function initVideoAutoplay() {
+  const videos = document.querySelectorAll('video');
+  if (!videos.length) return;
+
+  videos.forEach(video => {
+    // Ensure muted + playsinline are set programmatically (some browsers need this)
+    video.muted = true;
+    video.playsInline = true;
+
+    function tryPlay() {
+      const p = video.play();
+      if (p !== undefined) p.catch(() => {});
+    }
+
+    // Attempt 1: immediately
+    tryPlay();
+
+    // Attempt 2: when video enters the viewport
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) tryPlay(); });
+      }, { threshold: 0.1 });
+      io.observe(video);
+    }
+
+    // Attempt 3: on first user interaction (required by some strict browsers)
+    ['touchstart', 'touchend', 'click'].forEach(evt => {
+      document.addEventListener(evt, tryPlay, { once: true, passive: true });
+    });
+  });
+}
+
+/* ------------------------------------------------------------
    Boot
    ------------------------------------------------------------ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -268,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPizzeriaCarousel();
   injectWhatsApp();
   injectGoogleReviews();
+  initVideoAutoplay();
   // Sync tooltips to current language at startup
   const lang = document.documentElement.getAttribute('data-lang') || 'en';
   updateFloatingTooltips(lang);
