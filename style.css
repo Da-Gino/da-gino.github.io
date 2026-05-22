@@ -1666,8 +1666,27 @@ html[data-lang="it"] .hours-list li.it-text {
   .history-pullquote-text { font-size: 1.35rem; }
   .history-paragraph:first-of-type::first-letter { font-size: 3.5rem; }
 
-  .video-header { height: min(45vh, 300px); }
-  .contact-hero { height: min(35vh, 260px); }
+  /* Clear aspect-ratio conflict and give videos a proper mobile height */
+  .video-header {
+    aspect-ratio: unset;
+    height: 56vw;
+    min-height: 200px;
+    max-height: 320px;
+  }
+  .contact-hero {
+    aspect-ratio: unset;
+    height: 56vw;
+    min-height: 180px;
+    max-height: 280px;
+  }
+  /* Ensure video fills the container */
+  .video-container { width: 100%; height: 100%; }
+  .menu-video { width: 100%; height: 100%; }
+
+  /* Prevent header overflow on small screens */
+  .header-container { gap: var(--space-2); padding-inline: var(--space-4); }
+  .logo { height: 42px; }
+  .flag-btn { padding: 4px 9px; font-size: 0.7rem; }
 
   .whatsapp-widget-container { width: 52px; height: 52px; }
   .whatsapp-tooltip { display: none; }
