@@ -1666,7 +1666,7 @@ html[data-lang="it"] .hours-list li.it-text {
   .history-pullquote-text { font-size: 1.35rem; }
   .history-paragraph:first-of-type::first-letter { font-size: 3.5rem; }
 
-  /* Clear aspect-ratio conflict and give videos a proper mobile height */
+  /* Clear aspect-ratio and give headers a proper mobile height */
   .video-header {
     aspect-ratio: unset;
     height: 56vw;
@@ -1679,9 +1679,28 @@ html[data-lang="it"] .hours-list li.it-text {
     min-height: 180px;
     max-height: 280px;
   }
-  /* Ensure video fills the container */
-  .video-container { width: 100%; height: 100%; }
-  .menu-video { width: 100%; height: 100%; }
+  /* Hide video on mobile — show background image instead */
+  .menu-video { display: none; }
+  .video-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .video-header--menu .video-container    { background-image: url('mob_2.png'); }
+  .video-header--history .video-container { background-image: url('mob_1.png'); }
+  .video-header--contact .video-container { background-image: url('mob_3.png'); }
+  /* Apply the same dark overlay so text stays readable */
+  .video-header--menu .video-container::before,
+  .video-header--history .video-container::before,
+  .video-header--contact .video-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(43,31,26,0.3) 0%, rgba(43,31,26,0.05) 40%, rgba(43,31,26,0.45) 100%);
+    z-index: 0;
+  }
+  .video-overlay { z-index: 1; }
 
   /* Prevent header overflow on small screens */
   .header-container { gap: var(--space-2); padding-inline: var(--space-4); }
