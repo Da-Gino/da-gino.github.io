@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pizzeria Da Gino — Autentica Pizza Italiana a Pontedera, dal 1936.">
+  <title>Pizzeria da Gino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('language')||'en')}catch(e){}</script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ────────────────────────────────────────────── -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <a href="index.html">
+          <img src="Logo_Final.png" alt="Pizzeria da Gino" class="logo">
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html"   class="nav-link en-text" data-page="index.html">Home</a>
+        <a href="menu.html"    class="nav-link en-text" data-page="menu.html">Menu</a>
+        <a href="history.html" class="nav-link en-text" data-page="history.html">History</a>
+        <a href="contact.html" class="nav-link en-text" data-page="contact.html">Contact</a>
+        <a href="index.html"   class="nav-link it-text" data-page="index.html" style="display:none">Home</a>
+        <a href="menu.html"    class="nav-link it-text" data-page="menu.html"  style="display:none">Menu</a>
+        <a href="history.html" class="nav-link it-text" data-page="history.html" style="display:none">Storia</a>
+        <a href="contact.html" class="nav-link it-text" data-page="contact.html" style="display:none">Contatti</a>
+      </nav>
+
+      <div class="language-flags">
+        <button class="flag-btn active" data-lang="en" title="English">EN</button>
+        <button class="flag-btn"        data-lang="it" title="Italiano">IT</button>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer-panel">
+      <a href="index.html"   class="nav-link en-text" data-page="index.html">Home</a>
+      <a href="menu.html"    class="nav-link en-text" data-page="menu.html">Menu</a>
+      <a href="history.html" class="nav-link en-text" data-page="history.html">History</a>
+      <a href="contact.html" class="nav-link en-text" data-page="contact.html">Contact</a>
+      <a href="index.html"   class="nav-link it-text" data-page="index.html" style="display:none">Home</a>
+      <a href="menu.html"    class="nav-link it-text" data-page="menu.html"  style="display:none">Menu</a>
+      <a href="history.html" class="nav-link it-text" data-page="history.html" style="display:none">Storia</a>
+      <a href="contact.html" class="nav-link it-text" data-page="contact.html" style="display:none">Contatti</a>
+      <div class="language-flags" style="margin-top:2rem">
+        <button class="flag-btn active" data-lang="en">EN</button>
+        <button class="flag-btn"        data-lang="it">IT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HERO CAROUSEL ─────────────────────────────────────── -->
+  <section class="carousel-container" aria-label="Photo gallery">
+    <div class="carousel-wrapper">
+      <div class="carousel-slide fade">
+        <img src="Food_0.jpg" alt="Authentic Italian food" loading="eager">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Food_1.jpg" alt="Pizza Da Gino" loading="lazy">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Food_2.jpg" alt="Cecina e Focaccine" loading="lazy">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Food_3.jpg" alt="Pizza artigianale" loading="lazy">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Food_4.jpg" alt="Specialità di Pontedera" loading="lazy">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Food_5.jpg" alt="Pizzeria da Gino" loading="lazy">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Food_6.jpg" alt="Pizza da Gino" loading="lazy">
+      </div>
+
+      <div class="carousel-vignette"></div>
+
+      <!-- Carousel content -->
+      <div class="carousel-title-overlay">
+        <div class="hero-eyebrow hero-animate">Pontedera &nbsp;·&nbsp; Toscana &nbsp;·&nbsp; dal 1936</div>
+        <p class="hero-title-pizzeria hero-animate hero-animate-delay-1">Pizzeria</p>
+        <h1 class="hero-name hero-animate hero-animate-delay-2">da Gino</h1>
+        <p class="hero-sub hero-animate hero-animate-delay-3 en-text">Authentic Italian Pizza</p>
+        <p class="hero-sub hero-animate hero-animate-delay-3 it-text" style="display:none">Autentica Pizza Italiana</p>
+        <div class="hero-ctas hero-animate hero-animate-delay-4">
+          <a href="menu.html"    class="btn btn-primary  en-text">View the Menu</a>
+          <a href="contact.html" class="btn btn-secondary en-text">Find Us</a>
+          <a href="menu.html"    class="btn btn-primary  it-text" style="display:none">Vedi il Menu</a>
+          <a href="contact.html" class="btn btn-secondary it-text" style="display:none">Trovaci</a>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <a class="carousel-prev" onclick="changeSlide(-1)" role="button" aria-label="Previous">&#10094;</a>
+      <a class="carousel-next" onclick="changeSlide(1)"  role="button" aria-label="Next">&#10095;</a>
+
+      <!-- Dot bars -->
+      <div class="carousel-indicators">
+        <span class="indicator" role="button" aria-label="Slide 1"></span>
+        <span class="indicator" role="button" aria-label="Slide 2"></span>
+        <span class="indicator" role="button" aria-label="Slide 3"></span>
+        <span class="indicator" role="button" aria-label="Slide 4"></span>
+        <span class="indicator" role="button" aria-label="Slide 5"></span>
+        <span class="indicator" role="button" aria-label="Slide 6"></span>
+        <span class="indicator" role="button" aria-label="Slide 7"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT / WELCOME BAND ──────────────────────────────── -->
+  <section class="about-band">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="about-vertical-line"></div>
+        <span class="eyebrow en-text">Our Story</span>
+        <span class="eyebrow it-text" style="display:none">La Nostra Storia</span>
+        <h2 class="about-heading en-text">Since 1936, a piece of Pontedera</h2>
+        <h2 class="about-heading it-text" style="display:none">Dal 1936, un pezzo di Pontedera</h2>
+        <span class="about-script">tradizione · famiglia · forno a legna</span>
+        <div class="about-ornament">
+          <div class="about-ornament-line"></div>
+          <div class="about-ornament-dot"></div>
+          <div class="about-ornament-line"></div>
+          <div class="about-ornament-dot"></div>
+          <div class="about-ornament-line"></div>
+        </div>
+      </div>
+      <div class="about-right reveal reveal-delay-1">
+        <p class="lead en-text">A small, family-run Italian business where every day begins with the same dough and the same passion as it did nearly ninety years ago.</p>
+        <p class="lead it-text" style="display:none">Una piccola impresa familiare dove ogni giorno comincia con la stessa pasta e la stessa passione di quasi novant'anni fa.</p>
+        <p class="en-text">Da Gino specialises in the culinary jewels of Pontedera: Cecina (torta di ceci), Pisana pizza, crispy Focaccine, and wood-fired pizzas made strictly following the original recipe of Signor Gino Pucci.</p>
+        <p class="it-text" style="display:none">Da Gino è specializzata nelle specialità gastronomiche di Pontedera: Cecina (torta di ceci), pizza Pisana, Focaccine croccanti e pizze al forno a legna, seguendo rigorosamente la ricetta originale del Signor Gino Pucci.</p>
+        <blockquote class="about-pullquote en-text">
+          "A fixed appointment for all residents of Pontedera and surrounding areas — not only for the food, but for the warmth and wit of its people."
+        </blockquote>
+        <blockquote class="about-pullquote it-text" style="display:none">
+          "Appuntamento fisso per tutti i pontederesi — non solo per il cibo, ma per il calore e la simpatia delle persone."
+        </blockquote>
+        <a href="history.html" class="btn btn-outline en-text">Read Our History</a>
+        <a href="history.html" class="btn btn-outline it-text" style="display:none">Leggi la Storia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INFO CARDS ────────────────────────────────────────── -->
+  <section class="section--sm" style="background: var(--cream-deep);">
+    <div class="container">
+      <div class="info-section">
+
+        <!-- Location -->
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h2 class="en-text">Address</h2>
+          <h2 class="it-text" style="display:none">Indirizzo</h2>
+          <p class="en-text">Via Roma 47<br>56025 Pontedera (PI)<br>Toscana, Italia</p>
+          <p class="it-text" style="display:none">Via Roma 47<br>56025 Pontedera (PI)<br>Toscana, Italia</p>
+          <br>
+          <a href="contact.html" class="contact-link en-text">Get directions →</a>
+          <a href="contact.html" class="contact-link it-text" style="display:none">Come arrivare →</a>
+        </div>
+
+        <!-- Hours -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon card-icon--olive">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h2 class="en-text">Hours</h2>
+          <h2 class="it-text" style="display:none">Orari</h2>
+          <ul class="hours-list">
+            <li class="en-text"><span class="hours-day">Mon – Sat</span><span class="time">11:30 am – 3:00 pm</span></li>
+            <li class="en-text"><span class="hours-day"></span><span class="time">4:30 pm – 10:00 pm</span></li>
+            <li class="en-text"><span class="hours-day">Sunday</span><span class="closed">Closed</span></li>
+            <li class="it-text" style="display:none"><span class="hours-day">Lun – Sab</span><span class="time">11:30 – 15:00</span></li>
+            <li class="it-text" style="display:none"><span class="hours-day"></span><span class="time">16:30 – 22:00</span></li>
+            <li class="it-text" style="display:none"><span class="hours-day">Domenica</span><span class="closed">Chiuso</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <span class="footer-col-title en-text">Pizzeria da Gino</span>
+        <span class="footer-col-title it-text" style="display:none">Pizzeria da Gino</span>
+        <p class="footer-tagline en-text">Authentic Italian flavours, wood-fired in Pontedera since 1936.</p>
+        <p class="footer-tagline it-text" style="display:none">Sapori italiani autentici, dal forno a legna di Pontedera dal 1936.</p>
+      </div>
+      <!-- Contact -->
+      <div>
+        <span class="footer-col-title en-text">Contact</span>
+        <span class="footer-col-title it-text" style="display:none">Contatti</span>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Via Roma 47, 56025 Pontedera (PI)</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          <a href="tel:+390587721414">+39 0587 721414</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:rahim.ibra69@gmail.com">rahim.ibra69@gmail.com</a>
+        </div>
+      </div>
+      <!-- Hours -->
+      <div>
+        <span class="footer-col-title en-text">Hours</span>
+        <span class="footer-col-title it-text" style="display:none">Orari</span>
+        <div class="footer-hours-row en-text"><span>Mon – Sat</span><span>11:30 am – 3:00 pm</span></div>
+        <div class="footer-hours-row en-text"><span></span><span>4:30 pm – 10:00 pm</span></div>
+        <div class="footer-hours-row en-text"><span>Sunday</span><span class="closed-day">Closed</span></div>
+        <div class="footer-hours-row it-text" style="display:none"><span>Lun – Sab</span><span>11:30 – 15:00</span></div>
+        <div class="footer-hours-row it-text" style="display:none"><span></span><span>16:30 – 22:00</span></div>
+        <div class="footer-hours-row it-text" style="display:none"><span>Domenica</span><span class="closed-day">Chiuso</span></div>
+      </div>
+      <!-- Nav -->
+      <div>
+        <span class="footer-col-title en-text">Navigate</span>
+        <span class="footer-col-title it-text" style="display:none">Naviga</span>
+        <nav class="footer-nav-links en-text">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="history.html">History</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <nav class="footer-nav-links it-text" style="display:none">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="history.html">Storia</a>
+          <a href="contact.html">Contatti</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Social row -->
+    <div class="footer-social">
+      <a href="https://www.instagram.com/dagino_pontedera/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://wa.me/390587721414" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </a>
+      <a href="https://www.google.com/maps/place/Pizzeria+da+Gino/@43.662879,10.6346143,17z/data=!4m16!1m9!3m8!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!2sPizzeria+da+Gino!8m2!3d43.662879!4d10.6346143!9m1!1b1!16s%2Fg%2F11bwqbprts!3m5!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!8m2!3d43.662879!4d10.6346143!16s%2Fg%2F11bwqbprts?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Maps">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      </a>
+    </div>
+
+    <p class="footer-copyright en-text">© 2026 Pizzeria da Gino · Via Roma 47, Pontedera · All rights reserved.</p>
+    <p class="footer-copyright it-text" style="display:none">© 2026 Pizzeria da Gino · Via Roma 47, Pontedera · Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

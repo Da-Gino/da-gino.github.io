@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pizzeria Da Gino — Contatti — Via Roma 47, Pontedera.">
+  <title>Contact — Pizzeria da Gino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>try{document.documentElement.setAttribute('data-lang',localStorage.getItem('language')||'en')}catch(e){}</script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ────────────────────────────────────────────── -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <a href="index.html">
+          <img src="Logo_Final.png" alt="Pizzeria da Gino" class="logo">
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html"   class="nav-link en-text" data-page="index.html">Home</a>
+        <a href="menu.html"    class="nav-link en-text" data-page="menu.html">Menu</a>
+        <a href="history.html" class="nav-link en-text" data-page="history.html">History</a>
+        <a href="contact.html" class="nav-link en-text" data-page="contact.html">Contact</a>
+        <a href="index.html"   class="nav-link it-text" data-page="index.html"   style="display:none">Home</a>
+        <a href="menu.html"    class="nav-link it-text" data-page="menu.html"    style="display:none">Menu</a>
+        <a href="history.html" class="nav-link it-text" data-page="history.html" style="display:none">Storia</a>
+        <a href="contact.html" class="nav-link it-text" data-page="contact.html" style="display:none">Contatti</a>
+      </nav>
+      <div class="language-flags">
+        <button class="flag-btn active" data-lang="en">EN</button>
+        <button class="flag-btn"        data-lang="it">IT</button>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer-panel">
+      <a href="index.html"   class="nav-link en-text" data-page="index.html">Home</a>
+      <a href="menu.html"    class="nav-link en-text" data-page="menu.html">Menu</a>
+      <a href="history.html" class="nav-link en-text" data-page="history.html">History</a>
+      <a href="contact.html" class="nav-link en-text" data-page="contact.html">Contact</a>
+      <a href="index.html"   class="nav-link it-text" data-page="index.html"   style="display:none">Home</a>
+      <a href="menu.html"    class="nav-link it-text" data-page="menu.html"    style="display:none">Menu</a>
+      <a href="history.html" class="nav-link it-text" data-page="history.html" style="display:none">Storia</a>
+      <a href="contact.html" class="nav-link it-text" data-page="contact.html" style="display:none">Contatti</a>
+      <div class="language-flags" style="margin-top:2rem">
+        <button class="flag-btn active" data-lang="en">EN</button>
+        <button class="flag-btn"        data-lang="it">IT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VIDEO HERO ─────────────────────────────────────────── -->
+  <div class="video-header">
+    <div class="video-container">
+      <video class="menu-video" autoplay muted loop playsinline>
+        <source src="video_3.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay">
+        <h1 class="en-text">Contact Us</h1>
+        <h1 class="it-text" style="display:none">Contattaci</h1>
+        <p class="tagline en-text">We're here for you</p>
+        <p class="tagline it-text" style="display:none">Siamo qui per voi</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── INFO CARDS ──────────────────────────────────────────── -->
+    <section class="section--sm" style="background: var(--cream-warm);">
+      <div class="container">
+        <div class="info-section">
+
+          <!-- Address -->
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h2 class="en-text">Address</h2>
+            <h2 class="it-text" style="display:none">Indirizzo</h2>
+            <p>Via Roma, 47<br>56025 Pontedera (PI)<br>Toscana, Italia</p>
+            <br>
+            <a href="https://www.google.com/maps/place/PIZZERIA+DA+GINO./@43.662879,10.6346143,656m/data=!3m2!1e3!4b1!4m6!3m5!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!8m2!3d43.662879!4d10.6346143!16s%2Fg%2F11bwqbprts" target="_blank" rel="noopener noreferrer" class="contact-link en-text">Get directions →</a>
+            <a href="https://www.google.com/maps/place/PIZZERIA+DA+GINO./@43.662879,10.6346143,656m/data=!3m2!1e3!4b1!4m6!3m5!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!8m2!3d43.662879!4d10.6346143!16s%2Fg%2F11bwqbprts" target="_blank" rel="noopener noreferrer" class="contact-link it-text" style="display:none">Come arrivare →</a>
+          </div>
+
+          <!-- Phone & Email -->
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon card-icon--olive">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/>
+              </svg>
+            </div>
+            <h2 class="en-text">Get in Touch</h2>
+            <h2 class="it-text" style="display:none">Contattaci</h2>
+            <p><strong class="en-text">Tel: </strong><strong class="it-text" style="display:none">Tel: </strong><a href="tel:+390587721414" class="contact-link">+39 0587 721414</a></p>
+            <p style="margin-top:0.5rem"><strong class="en-text">Mobile: </strong><strong class="it-text" style="display:none">Cell: </strong><a href="tel:+393385671380" class="contact-link">+39 338 5671380</a></p>
+            <p style="margin-top:0.5rem"><strong>Email: </strong><a href="mailto:rahim.ibra69@gmail.com" class="contact-link">rahim.ibra69@gmail.com</a></p>
+          </div>
+
+          <!-- Hours -->
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h2 class="en-text">Opening Hours</h2>
+            <h2 class="it-text" style="display:none">Orari di Apertura</h2>
+            <ul class="hours-list">
+              <li class="en-text"><span class="hours-day">Mon – Sat</span><span class="time">11:30 am – 3:00 pm</span></li>
+              <li class="en-text"><span class="hours-day"></span><span class="time">4:30 pm – 10:00 pm</span></li>
+              <li class="en-text"><span class="hours-day">Sunday</span><span class="closed">Closed</span></li>
+              <li class="it-text" style="display:none"><span class="hours-day">Lun – Sab</span><span class="time">11:30 – 15:00</span></li>
+              <li class="it-text" style="display:none"><span class="hours-day"></span><span class="time">16:30 – 22:00</span></li>
+              <li class="it-text" style="display:none"><span class="hours-day">Domenica</span><span class="closed">Chiuso</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MAP ─────────────────────────────────────────────────── -->
+    <section class="map-section">
+      <div class="container">
+        <h2 class="en-text" style="text-align:center; margin-bottom: 0.5rem;">Find Us</h2>
+        <h2 class="it-text" style="display:none; text-align:center; margin-bottom: 0.5rem;">Trovaci</h2>
+        <div class="divider-ornament"><div class="diamond"></div></div>
+        <p class="map-address-text en-text">Via Roma, 47 · 56025 Pontedera (PI) · Italia</p>
+        <p class="map-address-text it-text" style="display:none">Via Roma, 47 · 56025 Pontedera (PI) · Italia</p>
+        <div class="map-frame-wrap reveal">
+          <iframe
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.6842547947754!2d10.6346143!3d43.662879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a75ee92fe77c7%3A0xc6d37d62beb9f284!2sPIZZERIA%20DA%20GINO!5e0!3m2!1sen!2sit!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Pizzeria da Gino on Google Maps">
+          </iframe>
+        </div>
+        <div class="map-cta reveal">
+          <a href="https://www.google.com/maps/place/PIZZERIA+DA+GINO./@43.662879,10.6346143,656m/data=!3m2!1e3!4b1!4m6!3m5!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!8m2!3d43.662879!4d10.6346143!16s%2Fg%2F11bwqbprts" target="_blank" rel="noopener noreferrer" class="btn btn-outline en-text">Open in Google Maps →</a>
+          <a href="https://www.google.com/maps/place/PIZZERIA+DA+GINO./@43.662879,10.6346143,656m/data=!3m2!1e3!4b1!4m6!3m5!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!8m2!3d43.662879!4d10.6346143!16s%2Fg%2F11bwqbprts" target="_blank" rel="noopener noreferrer" class="btn btn-outline it-text" style="display:none">Apri in Google Maps →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHATSAPP CTA BAND ──────────────────────────────────── -->
+    <section class="whatsapp-cta-band">
+      <div class="container" style="text-align:center">
+        <h3 class="en-text">Order or book a table via WhatsApp</h3>
+        <h3 class="it-text" style="display:none">Prenota un tavolo o ordina via WhatsApp</h3>
+        <a href="https://wa.me/390587721414" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span class="en-text">Write to Us on WhatsApp</span>
+          <span class="it-text" style="display:none">Scrivici su WhatsApp</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── INSTAGRAM ──────────────────────────────────────────── -->
+    <section class="instagram-section reveal">
+      <div class="container">
+        <h2 class="en-text">Follow Us</h2>
+        <h2 class="it-text" style="display:none">Seguici</h2>
+        <span class="instagram-handle">@dagino_pontedera</span>
+        <div class="instagram-embed-container">
+          <iframe
+            src="https://www.instagram.com/dagino_pontedera/embed"
+            width="400"
+            height="400"
+            frameborder="0"
+            scrolling="no"
+            allowtransparency="true"
+            class="instagram-iframe"
+            loading="lazy"
+            title="Pizzeria da Gino on Instagram">
+          </iframe>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="https://www.instagram.com/dagino_pontedera/" target="_blank" rel="noopener noreferrer" class="btn btn-outline en-text">Visit our Instagram →</a>
+          <a href="https://www.instagram.com/dagino_pontedera/" target="_blank" rel="noopener noreferrer" class="btn btn-outline it-text" style="display:none">Visita il nostro Instagram →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-col-title en-text">Pizzeria da Gino</span>
+        <span class="footer-col-title it-text" style="display:none">Pizzeria da Gino</span>
+        <p class="footer-tagline en-text">Authentic Italian flavours, wood-fired in Pontedera since 1936.</p>
+        <p class="footer-tagline it-text" style="display:none">Sapori italiani autentici, dal forno a legna di Pontedera dal 1936.</p>
+      </div>
+      <div>
+        <span class="footer-col-title en-text">Contact</span>
+        <span class="footer-col-title it-text" style="display:none">Contatti</span>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Via Roma 47, 56025 Pontedera (PI)</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          <a href="tel:+390587721414">+39 0587 721414</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:rahim.ibra69@gmail.com">rahim.ibra69@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title en-text">Hours</span>
+        <span class="footer-col-title it-text" style="display:none">Orari</span>
+        <div class="footer-hours-row en-text"><span>Mon – Sat</span><span>11:30 am – 3:00 pm</span></div>
+        <div class="footer-hours-row en-text"><span></span><span>4:30 pm – 10:00 pm</span></div>
+        <div class="footer-hours-row en-text"><span>Sunday</span><span class="closed-day">Closed</span></div>
+        <div class="footer-hours-row it-text" style="display:none"><span>Lun – Sab</span><span>11:30 – 15:00</span></div>
+        <div class="footer-hours-row it-text" style="display:none"><span></span><span>16:30 – 22:00</span></div>
+        <div class="footer-hours-row it-text" style="display:none"><span>Domenica</span><span class="closed-day">Chiuso</span></div>
+      </div>
+      <div>
+        <span class="footer-col-title en-text">Navigate</span>
+        <span class="footer-col-title it-text" style="display:none">Naviga</span>
+        <nav class="footer-nav-links en-text">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="history.html">History</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <nav class="footer-nav-links it-text" style="display:none">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="history.html">Storia</a>
+          <a href="contact.html">Contatti</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/dagino_pontedera/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://wa.me/390587721414" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </a>
+      <a href="https://www.google.com/maps/place/Pizzeria+da+Gino/@43.662879,10.6346143,17z/data=!4m16!1m9!3m8!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!2sPizzeria+da+Gino!8m2!3d43.662879!4d10.6346143!9m1!1b1!16s%2Fg%2F11bwqbprts!3m5!1s0x132a75ee92fe77c7:0xc6d37d62beb9f284!8m2!3d43.662879!4d10.6346143!16s%2Fg%2F11bwqbprts?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Maps">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      </a>
+    </div>
+    <p class="footer-copyright en-text">© 2026 Pizzeria da Gino · Via Roma 47, Pontedera · All rights reserved.</p>
+    <p class="footer-copyright it-text" style="display:none">© 2026 Pizzeria da Gino · Via Roma 47, Pontedera · Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
